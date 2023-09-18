@@ -49,63 +49,74 @@
         <hr />
         <form id="formProductos">
           <div class="mb-3">
-            <label for="codigo" class="form-label"
-              >Codigo</label
-            >
+            <label for="codigo" class="form-label">Codigo</label>
             <input
               type="text"
               class="form-control"
               id="codigo"
               placeholder="123"
+              maxlength="4"
+              required
             />
+            <div class="invalid-feedback">
+              debe ingresar un codigo alfanumerico
+            </div>
           </div>
           <div class="mb-3">
-            <label for="producto" class="form-label"
-              >Producto</label
-            >
+            <label for="producto" class="form-label">Producto</label>
             <input
               type="text"
               class="form-control"
               id="producto"
               placeholder="Ej: Iron Man"
+              maxlength="30"
+              required
             />
           </div>
+          
           <div class="mb-3">
-            <label for="descripcion" class="form-label"
-              >Descripcion</label
+            <label for="descripcion" class="form-label">Descripcion</label>
+            <textarea
+              class="form-control"
+              id="descripcion"
+              rows="3"
+              maxlength="50"
+              required
             >
-            <textarea class="form-control" id="descripcion" rows="3">
             </textarea>
           </div>
           <div class="mb-3">
-            <label for="cantidad" class="form-label"
-              >Cantidad</label
-            >
+            <label for="cantidad" class="form-label">Cantidad</label>
             <input
               type="text"
               class="form-control"
               id="cantidad"
               placeholder="2"
+              maxlength="3"
+              required
             />
           </div>
+        
           <div class="mb-3">
-            <label for="URL" class="form-label"
-              >URL</label
-            >
+            <label for="URL" class="form-label">URL</label>
             <input
               type="text"
               class="form-control"
               id="URL"
               placeholder="http://125.00"
+              maxlength="30"
+              required
             />
           </div>
-          
+
           <button type="submit" class="btn btn-primary">guardar</button>
         </form>
+        <div class="alert alert-danger my-3 d-none" role="alert" id="mensajeAlert">
+Debe completar todos los campos requeridos          </div>
       </section>
     </main>
     <footer></footer>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/admin.js"></script>
+    <script src="js/admin.js" type="module"></script>
   </body>
 </html>
