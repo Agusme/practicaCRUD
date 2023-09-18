@@ -44,7 +44,7 @@ export const campoRequerido = (input) => {
     campoCantidad,
     campoURL
   ) => {
-      let alert= document.querySelector("mensajeAlert")
+      let alert= document.getElementById("mensajeAlert")
    
       //comparar que pase cada una de las validaciones y si no pasa mostrar el alert
       if (
